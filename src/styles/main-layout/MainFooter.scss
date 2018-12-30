@@ -1,0 +1,25 @@
+.main-footer {
+  margin-top: 200px;
+
+  &-copyrights {
+    @include text(#b5b5bb, 500, 14);
+  }
+
+  &-sns {
+    margin-left: 15px;
+
+    a {
+      color: #b5b5bb;
+      font-size: 16px;
+    }
+  }
+
+  &-info {
+    margin-top: 30px;
+    border-top: 1px solid #f2f2f3;
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

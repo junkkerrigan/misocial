@@ -1,0 +1,31 @@
+$_min_sm: 425px;
+$_min_md: 768px;
+$_min_lg: 992px;
+$_min_xl: 1200px;
+
+$_max_xs: #{$_min_sm - 1px};
+$_max_sm: #{$_min_md - 1px};
+$_max_md: #{$_min_lg - 1px};
+$_max_lg: #{$_min_xl - 1px};
+
+$_white: #fff;
+$_violet: #6e45e2;
+
+@mixin text($color, $weight, $size) {
+  color: $color;
+  font: $weight #{$size}px 'Maven Pro', 'Helvetica', 'Verdana', sans-serif;
+}
+
+@mixin font($weight, $size) {
+  font: $weight #{$size}px 'Maven Pro', 'Helvetica', 'Verdana', sans-serif;
+}
+
+@mixin button($w, $h, $bg, $hover_bg) {
+  padding: #{$h}px #{$w}px;
+  border-radius: 25px;
+  background: $bg;
+
+  &:hover {
+    background: $hover_bg;
+  }
+}

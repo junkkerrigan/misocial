@@ -1,0 +1,68 @@
+$dark: #6a6a77;
+
+.main-nav {
+  &-link {
+    @include text($_white, 500, 16);
+  }
+
+  &-item {
+
+    &.dark {
+      .main-nav-link{
+        color: $dark;
+      }
+
+      &:hover {
+        border-bottom: 2px solid $dark;
+
+        .main-nav-link{
+          color: $dark;
+        }
+      }
+    }
+
+    &.active {
+      .main-nav-link {
+        color: #756edc;
+      }
+
+      &:hover {
+        .main-nav-link {
+          color: #756edc;
+        }
+      }
+    }
+
+    &.get-started {
+      @include button(30, 15, transparent, $_violet);
+      transition: .3s;
+      letter-spacing: 0.6px;
+
+      &:hover {
+        border: none;
+
+        .main-nav-link {
+          color: white;
+        }
+      }
+
+      .main-nav-link {
+        transition: .3s;
+        @include font(700, 12);
+      }
+    }
+
+    padding: 15px;
+    border-bottom: 2px solid transparent;
+    transition: .3s;
+
+    &:hover {
+      border-bottom: 2px solid $_white;
+      cursor: pointer;
+
+      .main-nav-link {
+        color: $_white;
+      }
+    }
+  }
+}
