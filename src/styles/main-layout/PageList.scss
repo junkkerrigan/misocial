@@ -1,6 +1,19 @@
 $dark: #6a6a77;
+$active: #000099;
 
 .main-nav {
+  &-list {
+    display: flex;
+
+    @media (max-width: $_max_lg) {
+      flex-direction: column;
+
+      &.closed {
+        display: none;
+      }
+    }
+  }
+
   &-link {
     @include text($_white, 500, 16);
   }
@@ -23,12 +36,12 @@ $dark: #6a6a77;
 
     &.active {
       .main-nav-link {
-        color: #756edc;
+        color: $active;
       }
 
       &:hover {
         .main-nav-link {
-          color: #756edc;
+          color: $active;
         }
       }
     }

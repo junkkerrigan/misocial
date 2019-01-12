@@ -5,6 +5,7 @@ import { createBrowserHistory } from 'history';
 
 import MainHeader from './components/main-layout/MainHeader';
 import MainFooter from './components/main-layout/MainFooter';
+import Home from './components/home/Home';
 
 import { getLocation } from './redux/actions';
 
@@ -30,7 +31,10 @@ const Routes = ({ setLocation }) => (
               );
             }
           } />
-
+          <Route exact path='/home' component={Home} />
+          <Route strict path='/home/' render={
+            () => <Redirect to='/home' />
+          } />
           <Route strict path='/:page' component={MainFooter} />
         </div>
       </Route>

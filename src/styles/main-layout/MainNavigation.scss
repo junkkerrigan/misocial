@@ -1,20 +1,40 @@
 $dark: #37374a;
 
-.main-logo {
+.main {
+  &-logo {
 
-  &.dark a {
-    color: $dark;
+    &.dark a {
+      color: $dark;
+    }
+
+    @include font(700, 21);
+
+    a {
+      color: $_white;
+      letter-spacing: 6px;
+    }
+
+    img {
+      margin-right: 20px;
+    }
   }
 
-  @include font(700, 21);
+  &-nav {
+    &-switch {
+      @media (min-width: $_min_lg) {
+        display: none;
+      }
+    }
 
-  a {
-    color: $_white;
-    letter-spacing: 6px;
-  }
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-  img {
-    margin-right: 20px;
+      @media (max-width: $_max_md) {
+        align-items: flex-start;
+      }
+    }
   }
 }
 

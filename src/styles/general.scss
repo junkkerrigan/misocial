@@ -14,3 +14,18 @@ li {
   list-style: none;
 }
 
+section {
+  min-height: 100vh;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none!important;
+}
+
+.hidden {
+  overflow: hidden;
+}
+

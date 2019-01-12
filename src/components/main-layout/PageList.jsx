@@ -9,7 +9,9 @@ const mapStateToProps = state => ({
   location: state.headerNav
 });
 
-const PageList = ({ location, theme }) => {
+//TODO: toggle menu styles
+
+const PageList = ({ location, theme, isOpen }) => {
   const navItems = [
     {
       name: 'Home',
@@ -33,25 +35,23 @@ const PageList = ({ location, theme }) => {
     },
   ];
   return (
-    <nav>
-      <ul className='d-flex'>
-        {
-          navItems.map(value =>
-            <li className={`main-nav-item${location===value.link?
-                ' active' : ''} ${theme}`} key={shortid.generate()}>
-              <Link className='main-nav-link' to={'/'+value.link}>
-                {value.name}
-              </Link>
-            </li>
-          )
-        }
-        <span className={`main-nav-item get-started ${theme}`}>
-          <Link to='get-started' className='main-nav-link text-uppercase'>
-            get started
-          </Link>
-        </span>
-      </ul>
-    </nav>
+    <ul className={`main-nav-list ${isOpen? 'open' : 'closed'}`}>
+      {
+        navItems.map(value =>
+          <li className={`main-nav-item${location===value.link?
+              ' active' : ''} ${theme}`} key={shortid.generate()}>
+            <Link className='main-nav-link' to={'/'+value.link}>
+              {value.name}
+            </Link>
+          </li>
+        )
+      }
+      <span className={`main-nav-item get-started ${theme}`}>
+        <Link to='get-started' className='main-nav-link text-uppercase'>
+          get started
+        </Link>
+      </span>
+    </ul>
   );
 };
 
