@@ -31,6 +31,10 @@ $dark: #37374a;
       justify-content: space-between;
       align-items: center;
 
+      &.open {
+        padding-bottom: 326px;
+      }
+
       @media (max-width: $_max_md) {
         align-items: flex-start;
       }

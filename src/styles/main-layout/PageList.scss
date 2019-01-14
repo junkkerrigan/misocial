@@ -5,13 +5,21 @@ $active: #000099;
   &-list {
     display: flex;
 
-    @media (max-width: $_max_lg) {
+    @media (max-width: $_max_md) {
       flex-direction: column;
-      background: linear-gradient(-60deg, #88d3ce 0%, #6e45e2 100%);
-      width: 50vw;
       position: absolute;
-      top: 40px;
       right: 0;
+      top: 50px;
+      width: 250px;
+
+      &.light {
+        top: 40px;
+        background: linear-gradient(-60deg, #88d3ce 0%, #6e45e2 100%);
+      }
+
+      @media (max-width: $_max_sm) {
+        width: 50vw;
+      }
 
       &.closed {
         display: none;

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Container } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import PageList from './PageList';
@@ -27,7 +26,7 @@ class MainNavigation extends Component {
     const { isMenuOpen } = this.state;
     const icon = isMenuOpen? 'times' : 'bars';
     return (
-      <nav className='container main-nav-wrapper'>
+      <nav className={`container main-nav-wrapper${isMenuOpen? ' open' : ''}`}>
         <h1 className={`main-logo text-uppercase ${theme}`}>
           <Link to='/home' className='d-flex align-items-center'>
             <img src={mainLogo} alt='main logo'/>

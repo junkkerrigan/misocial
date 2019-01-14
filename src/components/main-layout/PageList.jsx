@@ -34,7 +34,7 @@ const PageList = ({ location, theme, isOpen }) => {
     },
   ];
   return (
-    <ul className={`main-nav-list ${isOpen? 'open' : 'closed'}`}>
+    <ul className={`main-nav-list ${theme} ${isOpen? 'open' : 'closed'}`}>
       {
         navItems.map(value =>
           <li className={`main-nav-item${location===value.link?

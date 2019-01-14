@@ -1,13 +1,13 @@
-.home .welcome {
+.home .why-misocial {
 
   &-wrapper {
-    justify-content: flex-start;
+    justify-content: flex-end;
   }
 
-  max-width: 380px;
+  max-width: 420px;
 
   @media (max-width: $_max_md) {
-    max-width: 280px;
+    max-width: 300px;
   }
 
   @media (max-width: $_max_sm) {
