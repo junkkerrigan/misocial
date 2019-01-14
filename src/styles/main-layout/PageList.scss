@@ -7,6 +7,11 @@ $active: #000099;
 
     @media (max-width: $_max_lg) {
       flex-direction: column;
+      background: linear-gradient(-60deg, #88d3ce 0%, #6e45e2 100%);
+      width: 50vw;
+      position: absolute;
+      top: 40px;
+      right: 0;
 
       &.closed {
         display: none;
@@ -50,6 +55,10 @@ $active: #000099;
       @include button(30, 15, transparent, $_violet);
       transition: .3s;
       letter-spacing: 0.6px;
+
+      @media (max-width: $_max_lg) {
+        text-align: center;
+      }
 
       &:hover {
         border: none;

@@ -25,6 +25,7 @@ class MainNavigation extends Component {
   render() {
     const { theme } = this.props;
     const { isMenuOpen } = this.state;
+    const icon = isMenuOpen? 'times' : 'bars';
     return (
       <nav className='container main-nav-wrapper'>
         <h1 className={`main-logo text-uppercase ${theme}`}>
@@ -33,9 +34,9 @@ class MainNavigation extends Component {
             misocial
           </Link>
         </h1>
-        <div className='d-flex flex-column align-items-end hidden'>
+        <div className='d-flex flex-column align-items-end position-relative'>
           <button type='button' onClick={this.handleButtonClick} className='main-nav-switch'>
-            <FontAwesomeIcon icon={[ 'fas', 'bars' ]} style={ {
+            <FontAwesomeIcon icon={[ 'fas', icon ]} style={ {
               color: `${theme==='dark'?  '#37374a' : 'white'}`,
               fontSize: '24'
             } } />

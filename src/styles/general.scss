@@ -25,7 +25,16 @@ button {
   outline: none!important;
 }
 
+.hidden-y {
+  overflow-y: hidden;
+}
+
+.hidden-x {
+  overflow-x: hidden;
+}
+
 .hidden {
   overflow: hidden;
 }
+
 

@@ -9,7 +9,6 @@ const mapStateToProps = state => ({
   location: state.headerNav
 });
 
-//TODO: toggle menu styles
 
 const PageList = ({ location, theme, isOpen }) => {
   const navItems = [
