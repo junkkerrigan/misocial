@@ -3,6 +3,10 @@
   
   &-copyrights {
     @include text(#b5b5bb, 500, 14);
+    @media (max-width: $_max_sm) {
+      line-height: 20px;
+      margin-bottom: 15px;
+    }
   }
 
   &-sns {
@@ -21,5 +25,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: $_max_sm) {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
   }
 }

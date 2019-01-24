@@ -5,6 +5,7 @@ import { createBrowserHistory } from 'history';
 
 import MainHeader from './components/main-layout/MainHeader';
 import MainFooter from './components/main-layout/MainFooter';
+import MainLayout from './components/main-layout/MainLayout';
 import Home from './components/home/Home';
 
 import { getLocation } from './redux/actions';
@@ -17,28 +18,23 @@ const mapDispatchToProps = dispatch => ({
 
 const Routes = ({ setLocation }) => (
   <Router history={history}>
-    <Switch>
+    <>
       <Route exact path='/' render={
         () => <Redirect to='/home' />
       } />
-      <Route>
-        <div>
-          <Route strict path='/:page' render={
-            ({ match }) => {
-              setLocation(match.params.page);
-              return (
-                <MainHeader />
-              );
-            }
-          } />
-          <Route exact path='/home' component={Home} />
-          <Route strict path='/home/' render={
-            () => <Redirect to='/home' />
-          } />
-          <Route strict path='/:page' component={MainFooter} />
-        </div>
-      </Route>
-    </Switch>
+      <Route strict path='/:page' render={
+        ({ match }) => {
+          setLocation(match.params.page);
+          return null;
+        }
+      } />
+      <MainLayout>
+        <Route exact path='/home' component={Home} />
+        <Route strict path='/home/' render={
+          () => <Redirect to='/home' />
+        } />
+      </MainLayout>
+    </>
   </Router>
 );
 

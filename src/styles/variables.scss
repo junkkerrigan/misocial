@@ -20,6 +20,11 @@ $_violet: #6e45e2;
   font: $weight #{$size}px 'Maven Pro', 'Helvetica', 'Verdana', sans-serif;
 }
 
+@mixin sizes($w, $h: $w) {
+  width: $w;
+  height: $h;
+}
+
 @mixin button($w, $h, $bg, $hover_bg) {
   padding: #{$h}px #{$w}px;
   border-radius: 25px;

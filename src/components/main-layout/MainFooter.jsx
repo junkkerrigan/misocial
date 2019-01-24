@@ -12,7 +12,7 @@ const MainFooter = () => {
   return (
     <footer className='main-footer'>
       <MainNavigation theme='dark'/>
-      <Container className='main-footer-info '>
+      <Container className='main-footer-info'>
         <span className='main-footer-copyrights'>
           © 2017 Mass Impressions & Tranmautritam. Make the right impression.
         </span>
