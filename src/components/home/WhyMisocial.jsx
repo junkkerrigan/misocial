@@ -18,11 +18,11 @@ const Welcome = () => {
         <section className='why-misocial section dark'>
           <img src={welcomeBg} className='section-background' />
           <div className='section-background-sm' />
-          <span className='section-topic text-uppercase left-line'>social marketing & analytics</span>
+          <span className='section-topic left-line'>social marketing & analytics</span>
           <h2 className='section-title'>Take control of your data</h2>
           <p className='section-text'> {text} </p>
           <CustomLink customClass='section-link' text='core features' to='features' />
-          <ScrollButton />
+          <ScrollButton theme='dark' />
         </section>
       </Container>
     </div>

@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import '../../styles/home/ScrollButton.scss';
 
-const ScrollButton = () => {
+const ScrollButton = ({ theme }) => {
   const handleButtonClick = () => {
     const sections=document.getElementsByClassName("home-section");
     let scrollToSection=1;
@@ -30,9 +30,10 @@ const ScrollButton = () => {
   };
 
   return (
-    <button className='section-scroll-button dark' onClick={handleButtonClick}>
+    <button className={`section-scroll-button ${theme}`}
+      onClick={handleButtonClick}>
       <FontAwesomeIcon icon={[ 'fas', 'arrow-down']} style={ {
-        color: '#9fa4af',
+        color: theme==='dark'? 'white' : '#9fa4af',
         fontSize: '20'
       } } />
     </button>

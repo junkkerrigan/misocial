@@ -1,5 +1,4 @@
 .home .section-scroll-button {
-  box-shadow: 0 0 19px 2px rgba(204, 204, 223, 0.5);
   @include sizes(64px);
   border-radius: 50%;
   display: flex;
@@ -10,11 +9,12 @@
   transform: translate(-50%);
   bottom: 50px;
 
-  &.dark {
+  &.light {
     background: white;
+    box-shadow: 0 0 19px 2px rgba(204, 204, 223, 0.5);
   }
 
-  &.light {
+  &.dark {
     background: $_violet;
   }
 }

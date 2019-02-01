@@ -19,14 +19,14 @@ const Welcome = () => {
         <section className='welcome section light'>
           <img src={welcomeBg} alt="welcome background" className='section-background' />
           <div className='section-background-sm' />
-          <span className='section-topic text-uppercase left-line'>social marketing & analytics</span>
+          <span className='section-topic left-line'>social marketing & analytics</span>
           <h2 className='section-title'>Take control of your data</h2>
           <p className='section-text'> {text} </p>
           <div className='section-link-wrapper'>
             <CustomLink to='get-started' text='get started' customClass='section-link' />
             <CustomLink to='features' text='explore features' customClass='section-link' />
           </div>
-          <ScrollButton />
+          <ScrollButton theme='light' />
         </section>
       </Container>
     </div>
