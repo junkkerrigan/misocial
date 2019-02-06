@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from 'reactstrap';
 
-import CustomLink from '../CustomLink';
+import CustomLink from '../general/CustomLink';
 
 import '../../styles/home/WhyMisocial.scss';
 

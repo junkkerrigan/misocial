@@ -1,10 +1,8 @@
 import React from 'react';
-import { Router, Route, Switch, Redirect } from 'react-router-dom';
+import { Router, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createBrowserHistory } from 'history';
 
-import MainHeader from './components/main-layout/MainHeader';
-import MainFooter from './components/main-layout/MainFooter';
 import MainLayout from './components/main-layout/MainLayout';
 import Home from './components/home/Home';
 

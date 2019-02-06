@@ -3,17 +3,25 @@
   align-items: center;
 
   &-list {
-    margin-top: 120px;
+    margin-top: 100px;
+
+    @media (max-width: $_max_lg) {
+      margin-top: 60px;
+    }
   }
 
   &-item {
     display: flex;
     margin-bottom: 70px;
+
+    @media (max-width: $_max_md) {
+      flex-direction: column;
+    }
   }
 
   &-wrapper {
     justify-content: center;
-    padding: 120px 0 540px;
+    padding: 120px 15px 540px;
   }
 
   .section-background {
@@ -23,12 +31,26 @@
   &-title {
     @include text(white, 500, 24);
     letter-spacing: -0.67px;
-    margin-bottom: 25px;
+
+    @media (min-width: $_min_lg) {
+      margin-bottom: 25px;
+    }
+
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
   }
 
   &-text {
     @include text(#f1f1fb, 400, 16);
     line-height: 28px;
+    padding-left: 17px;
+
+    @media (min-width: $_min_md) {
+      padding-left: 0;
+    }
 
     &:hover {
       color: white;

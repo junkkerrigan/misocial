@@ -6,7 +6,6 @@ $gray: #4f4f6f;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 100vh;
 
     &.dark {
       .section {
@@ -52,7 +51,7 @@ $gray: #4f4f6f;
 
       &-sm {
         width: 100%;
-        height: 100vh;
+        height: 100%;
         position: absolute;
         top: 0;
         left: 0;
@@ -99,6 +98,10 @@ $gray: #4f4f6f;
         font-size: 42px;
         line-height: 47px;
       }
+
+      @media (max-width: $_max_sm) {
+        margin: 20px 0;
+      }
     }
 
     &-text {
@@ -108,6 +111,10 @@ $gray: #4f4f6f;
 
       @media (max-width: $_max_md) {
         margin-top: 10px;
+      }
+
+      @media (max-width: $_max_sm) {
+        margin-bottom: 30px;
       }
     }
 

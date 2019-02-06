@@ -9,6 +9,17 @@
   transform: translate(-50%);
   bottom: 50px;
 
+  @media (max-width: $_max_md) {
+    bottom: 20px;
+  }
+
+  @media (max-width: $_max_sm) {
+    position: static;
+    transform: none;
+    margin-top: 10px;
+
+  }
+
   &.light {
     background: white;
     box-shadow: 0 0 19px 2px rgba(204, 204, 223, 0.5);
